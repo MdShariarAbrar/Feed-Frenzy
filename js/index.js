@@ -181,23 +181,6 @@ const loadSearch = async () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // latest post section
 
 const loadLatestPost = async () => {
@@ -237,7 +220,7 @@ const displayLatestPost = (data) => {
       </div>
 
       <div >
-        <h3 class="text-[#12132D] font-bold">Cameron Williamson</h3>
+        <h3 class="text-[#12132D] font-bold">${post.author.name}</h3>
         <p class="text-[#12132D99] text-sm">${post.author.designation ? post.author.designation : 'Unknown'}</p>
       </div>
     </div>
