@@ -21,7 +21,7 @@ nav ul li {
 
 }
 
-nav button {
+.my-btn {
     border-radius: 50px;
     background: rgb(121, 125, 252);
     color: white;
@@ -48,8 +48,12 @@ nav button {
 
 
 /* post card design */
-.post-card {
-    border: 1px solid rgb(121, 125, 252);
-    border-radius: 24px;
-    background: rgba(121, 125, 252, 0.1);
+
+
+
+
+/* footer design */
+footer {
+    background: linear-gradient(180.00deg, rgba(18, 19, 45, 0.05),rgba(18, 19, 45, 0) 100%);
+    
 }
