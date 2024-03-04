@@ -50,13 +50,131 @@
             </div>
         </nav>
 
+        <!-- =====================================
+            =========banner section============  -->
+        <section class="bg-[#12132D] rounded-3xl mb-24">
+            <div class="banner flex gap-24 flex-col lg:flex-row justify-between items-center p-6 lg:p-24 rounded-3xl">
+
+              <div>
+                <h1 class="text-6xl text-white">Welcome to the <br> <span class="text-[#797DFC]">Feed</span>  Frenzy</h1>
+
+                <p class="my-8 text-xl font-medium text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum <br> coffee mug!</p>
+
+                <label class="bg-white p-4 rounded-3xl">
+                  <input  type="text" class="w-40 xl:grow " placeholder="Search here anything" />
+                  <button class="xl:ml-8 px-6 py-2 rounded-3xl text-white bg-[#797DFC]">Search</button>
+                </label>
+                
+
+              </div>
+
+              <div class="bg-white w-96 p-12 rounded-2xl banner-card">
+                <div class="flex justify-between">
+                  <p>Registered Users</p>
+                  <p>10</p>
+                </div>
+
+                <div class="flex justify-between">
+                  <p>Forum</p>
+                  <p>05</p>
+                </div>
+
+                <div class="flex justify-between">
+                  <p>Topics</p>
+                  <p>03</p>
+                </div>
+
+                <div class="flex justify-between">
+                  <p>Replies</p>
+                  <p>01</p>
+                </div>
+              </div>
+
+            </div>
+        </section>
+
     </header>
 
 
     <!-- ========================================================
     ==================main Section========================== -->
-    <main>
+    <main class="w-full mx-auto lg:w-4/5">
+      <!-- ===================
+      =======lets discuss section -->
+      
+      <section class="text-center mb-12">
+        <h1 class="text-[#12132D] text-4xl mb-7">Let’s Discuss</h1>
+        <p class="text-[#12132D99] text-xl ">Here you can discus on various topics like comedy music coding etc. <br> Lest discuss on your favourite topic and share your thougth</p>
+      </section>
 
+
+      <!-- ==================================
+      ========all post and mark section -->
+      <section class="grid grid-cols-3 gap-6">
+
+        <!-- ==============================
+        ======all posts -->
+        <div id="all-post-container" class="col-span-2">
+
+          <!-- dynamic post card templete -->
+          <div class="rounded-3xl bg-[#F3F3F5] p-4 lg:p-10 flex gap-6 flex-col lg:flex-row">
+
+            <div>
+              <div class="avatar online">
+                <div class="w-24 rounded-full">
+                  <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="text-[#12132DCC] text-base font-medium">
+                <span># Music</span> 
+                <span>Author: Awlad Hossain</span>
+              </div>
+              <h2 class="text-[#12132D0] text-xl font-bold mb-6">10 Kids Unaware of Their Halloween Costume</h2>
+              <p class="text-[#12132D99] text-base ">It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p>
+              <hr class="border border-dashed my-6 border-[#12132D99]">
+              <div class="flex justify-between items-center ">
+                <div class="text-[#12132D99] flex gap-4">
+                  <span><i class="fa-regular fa-message"></i> 560</span>
+                  <span><i class="fa-regular fa-eye"></i> 1568</span>
+                  <span><i class="fa-regular fa-clock"></i> 5 min</span>
+                </div>
+                <div class="bg-[#10B981] rounded-full w-7 h-7 text-center text-white">
+                  <i class="fa-solid fa-envelope-open"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <!-- =========================
+        =======mark read========= -->
+        <div class="bg-[#12132D0D] rounded-3xl p-4 lg:p-6">
+          <div class="flex justify-between items-center">
+            <p class="text-[#12132D] text-xl font-bold">Title</p>
+            <p class="text-[#12132D99] text-base">
+              <i class="fa-solid fa-check-double text-[#3DCE09]"></i>
+              <span>Mark as read </span>
+              <span>(4)</span>
+            </p>
+          </div>
+
+          <div>
+
+            <!-- dynamic mark read list template -->
+            <div class="bg-white rounded-2xl p-3 flex justify-between flex-col lg:flex-row">
+              <p class="text-[#12132D] text-base font-semibold">10 Kids Unaware of Their Halloween Costume</p>
+              <p class="text-[#12132D99] text-base lg:flex lg:gap-3 justify-between items-center"><i class="fa-regular fa-eye"></i> <span>1568</span></p>
+            </div>
+          </div>
+
+        </div>
+      </section>
     </main>
 
 

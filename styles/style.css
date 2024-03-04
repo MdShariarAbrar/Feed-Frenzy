@@ -30,3 +30,26 @@ nav button {
     font-weight: 700;
 }
 
+/* banner design */
+
+.banner {
+    background-image: url('../images/bgbanner.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.banner-card div {
+    color: rgba(18, 19, 45, 0.8);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+
+
+/* post card design */
+.post-card {
+    border: 1px solid rgb(121, 125, 252);
+    border-radius: 24px;
+    background: rgba(121, 125, 252, 0.1);
+}
