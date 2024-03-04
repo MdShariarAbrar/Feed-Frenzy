@@ -54,7 +54,13 @@ const displayAllPosts = posts => {
     
 }
 
+let markCount = 0;
+
+
 const markAsRead = (id) => {
+    markCount++;
+    const markCountContent = document.getElementById('mark-counter');
+    markCountContent.innerText =`(${markCount})` ;
     const markContainer = document.getElementById('mark-container');
     console.log(id);
     fetch("https://openapi.programming-hero.com/api/retro-forum/posts")
