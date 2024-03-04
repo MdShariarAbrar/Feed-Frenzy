@@ -82,14 +82,14 @@ const markAsRead = (id) => {
     const markCountContent = document.getElementById('mark-counter');
     markCountContent.innerText =`(${markCount})` ;
     const markContainer = document.getElementById('mark-container');
-    console.log(id);
+    
     fetch("https://openapi.programming-hero.com/api/retro-forum/posts")
         .then(res => res.json())
         .then(data => {
             
             const allPost = data.posts;
             const clickedObj = allPost.find(post => post.id === id);
-            console.log(clickedObj);
+            
 
             displayMarkTitle(clickedObj)
 
