@@ -1,3 +1,4 @@
+// load api for all post
 async function loadAllPost() {
     const url = "https://openapi.programming-hero.com/api/retro-forum/posts"
     const res = await fetch(url);
@@ -8,7 +9,7 @@ async function loadAllPost() {
 }
 
 
-
+// display all post in webpage
 const displayAllPosts = posts => {
 
     const postContainer = document.getElementById("all-post-container")
@@ -53,6 +54,8 @@ const displayAllPosts = posts => {
 
     
 }
+
+// mark as read counter
 
 let markCount = 0;
 
