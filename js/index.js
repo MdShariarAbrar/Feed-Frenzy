@@ -8,6 +8,7 @@ async function loadAllPost() {
 }
 
 
+
 const displayAllPosts = posts => {
 
     const postContainer = document.getElementById("all-post-container")
@@ -39,7 +40,7 @@ const displayAllPosts = posts => {
              <span><i class="fa-regular fa-eye"></i> ${post.view_count}</span>
              <span><i class="fa-regular fa-clock"></i> ${post.posted_time} min</span>
            </div>
-           <div class="bg-[#10B981] rounded-full w-7 h-7 text-center text-white">
+           <div onclick="markAsRead(${post.id})" class="bg-[#10B981] rounded-full w-7 h-7 text-center text-white">
              <i class="fa-solid fa-envelope-open"></i>
            </div>
          </div>
@@ -47,7 +48,45 @@ const displayAllPosts = posts => {
      </div>
        `
         postContainer.appendChild(postCard);
+        
     });
+
+    
 }
 
-loadAllPost();
+const markAsRead = (id) => {
+    const markContainer = document.getElementById('mark-container');
+    console.log(id);
+    fetch("https://openapi.programming-hero.com/api/retro-forum/posts")
+        .then(res => res.json())
+        .then(data => {
+            
+            const allPost = data.posts;
+            const clickedObj = allPost.find(post => post.id === id);
+            console.log(clickedObj);
+
+            displayMarkTitle(clickedObj)
+
+
+        })
+
+    const displayMarkTitle = obj => {
+        const markCard = document.createElement('div');
+        markCard.innerHTML = `
+        <div class="bg-white rounded-2xl p-3 flex justify-between flex-col lg:flex-row mb-6">
+        <p class="text-[#12132D] text-base font-semibold">${obj.title}</p>
+        <p class="text-[#12132D99] text-base lg:flex lg:gap-3 justify-between items-center"><i class="fa-regular fa-eye"></i> <span>${obj.view_count}</span></p>
+      </div>
+        `
+        markContainer.appendChild(markCard);
+
+    }
+        
+
+    
+    
+    
+
+}
+
+loadAllPost()
