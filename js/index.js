@@ -99,3 +99,56 @@ const markAsRead = (id) => {
 }
 
 loadAllPost()
+
+
+// latest post section
+
+const loadLatestPost = async () => {
+  const url = "https://openapi.programming-hero.com/api/retro-forum/latest-posts";
+  const res = await fetch(url);
+  const data = await res.json();
+  console.log(data);
+
+  displayLatestPost(data)
+
+}
+
+const displayLatestPost = (data) => {
+  const latestPostContainer = document.getElementById("latest-post-container");
+
+  data.forEach(post => {
+    postCard = document.createElement('div');
+    postCard.innerHTML = `
+    <div class="card bg-base-100 shadow-xl">
+    <figure class="px-8 py-6">
+      <img src=${post.cover_image} alt="Shoes" class="rounded-xl" />
+    </figure>
+    <div class="flex gap-3 items-center px-8 text-[#12132D99]">
+      <i class="fa-regular fa-calendar-plus"></i>
+      <span>${post.author.posted_date ? post.author.posted_date : 'No Publish Date'}</span>
+    </div>
+    <div class="px-8 my-4 items-center ">
+      <h2 class="card-title text-left text-[#12132D] text-xl">${post.title}</h2>
+      <p class="text-left text-[#12132D99]">${post.description}</p>
+    </div>
+
+    <div class="px-8 flex items-center gap-5 pb-6">
+      <div class="avatar ">
+        <div class="w-16 rounded-full">
+          <img src=${post.profile_image} />
+        </div>
+      </div>
+
+      <div >
+        <h3 class="text-[#12132D] font-bold">Cameron Williamson</h3>
+        <p class="text-[#12132D99] text-sm">${post.author.designation ? post.author.designation : 'Unknown'}</p>
+      </div>
+    </div>
+  </div>
+    `
+
+    latestPostContainer.appendChild(postCard);
+  })
+}
+
+loadLatestPost()
