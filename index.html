@@ -61,8 +61,8 @@
                 <p class="my-8 text-xl font-medium text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum <br> coffee mug!</p>
 
                 <label class="bg-white p-4 rounded-3xl">
-                  <input  type="text" class="w-40 xl:grow " placeholder="Search here anything" />
-                  <button class="xl:ml-8 px-6 py-2 rounded-3xl text-white bg-[#797DFC]">Search</button>
+                  <input id="searchbox" type="text" class="w-40 xl:grow " placeholder="Search here anything" />
+                  <button class="xl:ml-8 px-6 py-2 rounded-3xl text-white bg-[#797DFC]" onclick="loadSearch()">Search</button>
                 </label>
                 
 
@@ -99,6 +99,20 @@
     <!-- ========================================================
     ==================main Section========================== -->
     <main class="w-full mx-auto lg:w-4/5">
+      <!-- ===================
+      =======loading spinner -->
+        
+      <div id="load-bar" class="text-center hidden">
+        <!-- <span class="loading loading-bars loading-xs"></span>
+        <span class="loading loading-bars loading-sm"></span>
+        <span class="loading loading-bars loading-md"></span> -->
+        <span class="loading loading-bars loading-lg"></span>
+        <span class="loading loading-bars loading-lg"></span>
+        <span class="loading loading-bars loading-lg"></span>
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
+
+
       <!-- ===================
       =======lets discuss section -->
       
